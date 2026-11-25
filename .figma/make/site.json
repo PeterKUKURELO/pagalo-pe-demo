@@ -1,0 +1,12 @@
+{
+  "title": "Págalo.pe con ALIGNET",
+  "description": "Permite a los ciudadanos pagar trámites del Banco de la Nación con una experiencia unificada y pagos orquestados con ALIGNET y Pay-me.",
+  "language": "es",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
