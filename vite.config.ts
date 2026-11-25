@@ -6,7 +6,7 @@ import path from "node:path";
 import type { IncomingMessage, ServerResponse } from "node:http";
 
 import siteConfiguration from "./.figma/make/site.json";
-import { createPaymeSession } from "./server/payme.ts";
+import { createPaymeSession } from "./api/payme-session.ts";
 
 // Vite config — https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -51,9 +51,7 @@ export default defineConfig(({ mode }) => {
   };
 });
 
-function paymeIntegrationPlugin(
-  environment: Record<string, string | undefined>,
-): Plugin {
+function paymeIntegrationPlugin(environment: Record<string, string | undefined>): Plugin {
   const paymeMiddleware = async (_request: IncomingMessage, response: ServerResponse) => {
     if (_request.method !== "POST") {
       response.statusCode = 405;
