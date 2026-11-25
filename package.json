@@ -2,7 +2,7 @@
   "name": "pagalo-pe-alignet-demo",
   "version": "1.0.0",
   "private": true,
-  "description": "Prototipo de Págalo.pe con experiencia de pagos orquestada por ALIGNET y Pay-me.",
+  "description": "Demo interactiva de Págalo.pe con experiencia de pagos orquestada por ALIGNET y Pay-me.",
   "type": "module",
   "engines": {
     "node": ">=22 <25"
