@@ -9,7 +9,13 @@ const json = (body: Record<string, unknown>, status = 200) =>
     },
   });
 
-export async function POST() {
-  const result = await createPaymeSession(process.env);
-  return json(result.body, result.status);
-}
+export default {
+  async fetch(request: Request) {
+    if (request.method !== "POST") {
+      return json({ error: "Método no permitido." }, 405);
+    }
+
+    const result = await createPaymeSession(process.env);
+    return json(result.body, result.status);
+  },
+};
